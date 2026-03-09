@@ -9,3 +9,7 @@ Checkpoint 1
 Checkpoint 2
 1. The app truth currently is in the index.tsx and the states are controlled using "useState" based on what the user types.
 2. If loading is not set back to false, we will be stuck in a loading state forever, and the loading indicator will be there forever.
+
+Checkpoint 3
+1. A raw JSON file is unstyled and organized data that we pull from the API. A shaped object is better because it has exactly what the UI needs and displays it without the mess of a raw JSON file.
+2. The UI is responsible for displaying the text, styling, and images, while the logic is responsible for giving the fetched response and giving the information for the UI to display.
