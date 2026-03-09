@@ -22,4 +22,14 @@ Checkpoint 4
 2. To reuse the API we could move the API into a different file and call a function instead of keeping it inside one file
 3. If I wanted to test the logic, I would launch the website, type in any Pokémon, and check the browser console to see what got passed.
 
-  
+Checkpoint 5
+1. It is a win because it keeps the API Service its own thing, so we can reuse it and change the UI separately without it being together in one file.
+2. The service takes the Pokémon name typed as input, returns the Pokémon object from the API as output, and throws an error if the input isn't a valid Pokémon. 
+
+Checkpoint 7
+1. It provides the service a clear way to build the Pokémon object, telling it the fields we want to store and where to store them.
+2. The model is safer than the raw JSON because it takes the info drawn from the API and builds it exactly how we want it, so we can easily match that with the UI and avoid any errors.
+
+Checkpoint 8
+1.
+2.
