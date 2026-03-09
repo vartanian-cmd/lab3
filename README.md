@@ -3,7 +3,7 @@ Checkpoint 0
 2. The state variable is the pokemonName by storing what the user types in the search box, and it gets the pokemon that was typed.
 
 Checkpoint 1
-1.
+1. When fetch receives a non-200 response, it doesn't reject the response; instead, we check if the response is ok.
 2. We shouldn't assume the JSON fields exist as if the API returns values that are missing, null, etc., it can cause errors.
 
 Checkpoint 2
@@ -31,5 +31,21 @@ Checkpoint 7
 2. The model is safer than the raw JSON because it takes the info drawn from the API and builds it exactly how we want it, so we can easily match that with the UI and avoid any errors.
 
 Checkpoint 8
-1.
-2.
+1. The controller did what the index used to do: it handles the state of the app, validates the input, fetches data, and handles errors.
+2. The controller is a better place because validation is data logic and not UI logic. The view only needs to validate data, it doesn't need to do the validation in the view.
+
+Checkpoint 9
+1. The view needs the props: pokemonName, loading(either true or false), error, pokemon, favorites, isFavorite.
+2. If the view called the API directly, it would skip through validation and state changes, which could break, as states are not being changed, and validation is skipped. 
+
+Checkpoint 10
+1. Because the favorites are a state, the view will make UI changes based on the state of whether a Pokémon is a favorite or not. 
+2. The derived state for isFavorite is the favorites list to make sure the list of favorite Pokémon always matches the Pokémon that have isFavorite = true.
+
+Checkpoint 11
+1. It deals with storage, so it belongs in a service layer as it is not part of the UI. Keeping it by itself allows for repeated usage for multiple files.
+2. A "state" is reset upon app restart, while a "persisted state" is saved even if the app is restarted.
+
+Checkpoint 12
+1. The animation belongs in the view layer because it is handled by the UI, it spins the picture that the UI displays so it belongs in the view.
+2. The animation gets triggered when the Pokémon's state changes, it detects a new Pokémon, and then spins the picture each time.
