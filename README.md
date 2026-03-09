@@ -13,3 +13,13 @@ Checkpoint 2
 Checkpoint 3
 1. A raw JSON file is unstyled and organized data that we pull from the API. A shaped object is better because it has exactly what the UI needs and displays it without the mess of a raw JSON file.
 2. The UI is responsible for displaying the text, styling, and images, while the logic is responsible for giving the fetched response and giving the information for the UI to display.
+
+Checkpoint 4
+1. Index.tsx currently
+- Displays the title, input for the search engine, images, texts, the buttons, and styling
+- Manages the state of the pokemonName, loading, errors
+- It fetches the input using fetch
+2. To reuse the API we could move the API into a different file and call a function instead of keeping it inside one file
+3. If I wanted to test the logic, I would launch the website, type in any Pokémon, and check the browser console to see what got passed.
+
+  
